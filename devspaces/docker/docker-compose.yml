@@ -1,0 +1,16 @@
+version: '3.2'
+services:  
+  leather:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - type: bind
+        source: ../../
+        target: /data/leather
+    container_name: leather-dev
+    expose:
+      - "4000"
+      - "5432"
+    network_mode: host
+
