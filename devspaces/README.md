@@ -29,26 +29,16 @@ devspaces create
 
 ```
 cd /data
-
 git clone https://github.com/trilogy-group/leather.git
-
 cd leather
-
 mix deps.get       # install elixir dependencies
-
 mix ecto.create    # build elixir source code
-
 mix ecto.setup     # run database migrations
-
 cd assets    
-
 npm install        # install nodejs dependencies 
-
 cd ..
-
 mix phoenix.server # run application
 ```
-
 
 ## Running Leather via Docker-Compose file
 
