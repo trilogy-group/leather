@@ -33,8 +33,8 @@ RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo 
 #Installing nodejs
 RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - \
     && apt-get update \
-    && apt-get install -y nodejs \
-    && apt-get install -y inotify-tools
+    && apt-get install -y nodejs inotify-tools 
+
 
 COPY pg_hba.conf /etc/postgresql/11/main/pg_hba.conf 
 COPY entrypoint.sh /entrypoint.sh
