@@ -43,6 +43,8 @@ RUN chown postgres:postgres /etc/postgresql/11/main/pg_hba.conf \
     && chmod u+x /entrypoint.sh \
     && chmod 640 /etc/postgresql/11/main/pg_hba.conf 
 
+WORKDIR /data
+
 EXPOSE 4000 5432
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]

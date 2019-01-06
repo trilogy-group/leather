@@ -21,14 +21,13 @@ devspaces create
 
 3. Once devspaces started, run `devspaces exec <devspaces-name>` command.
 
-4. After previous command a new CMD window should be opened. CMD should be inside devspaces container.
+4. After previous command a new CMD window should be opened. CMD should be inside devspaces container in `/data` folder location.
 
-5. Clone the source code from https://github.com/trilogy-group/leather.git on sync folder on your local machine. Wait until it will be synced. You may find out your sync folder by running `devsapces info <devspaces-name>` command.
+5. Clone the source code from https://github.com/trilogy-group/leather.git on sync folder on your local machine. Wait until it will be synced. You may find out your sync folder by running `devspaces info <devspaces-name>` command.
 
 6. Run the following commands to build the project
 
 ```
-cd /data
 git clone https://github.com/trilogy-group/leather.git
 cd leather
 mix deps.get       # install elixir dependencies
